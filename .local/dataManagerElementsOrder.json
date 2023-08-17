@@ -1,0 +1,32 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "statusWindowMessage&",
+        "Config&",
+        "instanceName&"
+      ],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "statusWindowMessage&Sequence_35",
+        "Config&Sequence_35",
+        "instanceName&Sequence_35"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "TriggerEventArgs",
+        "Hide_Messages",
+        "Hide_Results"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
