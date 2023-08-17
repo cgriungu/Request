@@ -5,6 +5,7 @@
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Form.Activities": "[23.8.0-preview]",
+    "UiPath.MicrosoftOffice365.Activities": "2.2.7",
     "UiPath.System.Activities": "[23.8.1-preview]",
     "UiPath.UIAutomation.Activities": "[23.6.2-preview]",
     "UiPath.WebAPI.Activities": "[1.16.2]"
