@@ -1,0 +1,183 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ZohoAutomation" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="ContactName" Type="InArgument(x:String)" />
+    <x:Property Name="Email" Type="InArgument(x:String)" />
+    <x:Property Name="Subject" Type="InArgument(x:String)" />
+    <x:Property Name="Successful" Type="OutArgument(x:Boolean)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>574,2039</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ZohoAutomation_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ZohoAutomation" sap:VirtualizedContainerService.HintSize="584,1974" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="522,1863" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Gakii" sap:VirtualizedContainerService.HintSize="484,1657" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="fe94d097-0ef6-4878-b018-4ee10a94aa3a" Version="V2">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1440" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fe94d097-0ef6-4878-b018-4ee10a94aa3a" Version="V3">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://desk.zoho.com/agent/gakii/gakii/tickets/list/all-cases" DesignTimeRectangle="1076, 138, 24, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'BUTTON'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' class='zd_button_tag zd_v2-semanticbutton-buttonReset zd_v2-allmoduleformshortcut-addmoduleicon zd_v2447337210e zd_v254616f0b48' aaname='' /&gt;" Guid="21f729bf-73e8-425f-9dfb-2dbb326a9427" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAkCAYAAACaJFpUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADQSURBVFhHY9A18ftPT0x/C7mKX/8HYZPen2Campg3985/Be82+lkIw8iW0sVCkE/paiEIj1pIdTxqIdXxqIVUx4PfQq3ZX/4vuP7r/4l7v1Hwgevf/1fMfodVDzIm3cJl3/9f+PYfE3z7/X/GMhpYyFX85r/jejRLgZYtWPv+vxBW9aiYDAtB+M1/yxXf/5/4BLTsE9BnK4izDITJtBCCtWZ/+p9ARLwhY4osJAePWkh1PGoh1fGohVTHdLWQ7k19unVmsHbXkDn0wHS20O8/AF2JHDs/wLhgAAAAAElFTkSuQmCC" InformativeScreenshot="490bd662114f018978827c2fd75468a3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gakii' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+                  </uix:NClick.Target>
+                </uix:NClick>
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ticket'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fe94d097-0ef6-4878-b018-4ee10a94aa3a" Version="V3">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://desk.zoho.com/agent/gakii/gakii/tickets/list/all-cases" CvTextArgument="Ticket" CvType="Text" DesignTimeRectangle="901, 233, 156, 15" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Ticket'" FullSelectorArgument="&lt;webctrl aaname='Ticket' parentid='react' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Ticket' parentid='react' tag='DIV' type='' class='zd_v2-allmoduleformshortcut-moduleText zd_v24af66c9aeb zd_v2050393fdda zd_v2d6f24eb601 zd_v2577c9fa95f' check:innerText='Ticket' /&gt;" Guid="13b333c4-a052-4841-bb60-b91120c23eb3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKAAAAATCAYAAAAXkQb2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIUSURBVGhD7ZdPq3FRFId9AR/Ah5AMRCRGTJQPoAxMlKGBYqIomTA1VUzF1EBRQihFycxAiWIipPz53dbOOd3boRe33tP7nvXUbrf3WaszeVp7LR0YRkVYQEZVWEBGVVhARlVkAVOpFHQ6nWKZTCbMZrN71J85Ho8Ih8Mol8v3G4Z5jqICbjYbeL1ehUD5fB6BQAC73e5+85jfCDgajVAsFu8nRgu8LOCr/EZAqsK0GO3wsoB0JrFIsNvthkajAafTKZ5po9GISqWC6/WqELDZbMLtdmM4HIq8arUq4imP8rvdroj73gK8++wz/y4fCTgYDOBwONDr9YR0/X4fNpsNtVrth4CdTgd2u11ISLTbbSHjZDKRJfb5fFgul+I7V0Dt8baAh8MByWQS6XRaSETQPp/PcTqdZAGj0aiQTZKPYqQ8+getxWKBYDCIVqslYlhA7fG2gNvtVq5wj5AENBgMCIVC8tAi3ZvNZng8nh+LKifBAmqPjytgLpeTKyBBPdt6vZZFKxQKiEQiSCQS2O/3uFwuiMfjYpp+BguoPT7qAenJdLlcovf73gPW63VZQIpfrVbw+/3IZrM4n88Pe0CLxSLORCaTQSwWE7GMNvhIQJKOpl6r1SqmVtqfTcHT6VTIWSqVRBWkKVjKoymYJJQq6Xg8FkLq9Xp5Omb+bxQCMszfhAVkVIUFZFSFBWRUhQVkVAT4AkieSeNeFVv1AAAAAElFTkSuQmCC" InformativeScreenshot="097932e285dcc2dbc0db936ef7e7da64.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gakii' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                  </uix:NClick.Target>
+                </uix:NClick>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Contact Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="fe94d097-0ef6-4878-b018-4ee10a94aa3a" Text="Christine" Version="V3">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://desk.zoho.com/agent/gakii/gakii/tickets/new" CvType="InputBox" DesignTimeRectangle="118, 332, 260, 28" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT ZD_31'" FullSelectorArgument="&lt;webctrl id='ZD_31' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZD_31' tag='INPUT' type='text' class='zd_input_tag zd_v2-textbox-container zd_v2-textbox-basic zd_v2-textbox-varClass zd_v2-textbox-xmedium zd_v2-textbox-primary zd_v2266b1e491d zd_v2-textbox-effect zd_v2-textbox-borderColor_default' aaname='Contact Name' /&gt;" Guid="34bd247e-b493-44e6-a1d4-4ff65d2c017a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQgAAAAgCAYAAADufuYQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACDSURBVHhe7daxCcAwEARB9d+fQ8Uu4w0GKdsOZuBaWG4NQBAIIAkEkAQCSAIBJIEAkkAASSCAJBBAEgggCQSQBAJIAgEkgQCSQABJIIAkEEASCCAJBJAEAkgCASSBAJJAAEkggCQQQBIIIAkEkAQCSAIBpBuIZ79mZv8ODwJIAgGEmQ95VB4eigyt5QAAAABJRU5ErkJggg==" InformativeScreenshot="f0d37168f81d6b1c74ca819a6f6b1f74.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gakii' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target CvTextArgument="Contact Name *" CvType="Text" DesignTimeRectangle="118, 309, 103, 18" ElementType="Text" FriendlyName="'Contact Name'" FullSelectorArgument="&lt;webctrl id='891866000000000391' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='891866000000000391' tag='LABEL' type='' class='zd_v2-label-label zd_v2-label-varClass zd_v2-label-title zd_v2-label-medium zd_v2-labelcolors-mandatory zd_v2-label-font_default zd_v2-label-pointer zd_v2-fields-fieldLabel zd_v2-fields-labelMandatory' aaname='Contact Name' check:innerText='Contact Name' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGsAAAAWCAYAAADHA2ITAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVISURBVGhD7VhNSyNZFJ0/lVUvhIaGhgFdZSeCQkMPDCjCiAthQDfiLBQX4kIiyGwMDZJAQxbigDggRGiwQRQklQ9rktgVk5QaEkk4c269V0lVUnabsZsxkAMFvo+8uu+ee8+95U8YYmAwJGuAMCRrgDAka4AwJGuA0ENWs5iE+fsUUiMhpEKvkHq3APPEQkuvDyYsFKblPmPInTT0nEYxhnQohKtPevyC4SOr/mkNBglKbyZh2w00GxYqCc6NvEImbn5Hwhqo7K8hs3Oqx98B5VMG2QquLT32wSWLTziCclNPC14YWaV12rge7JcOWY1TXI2GYKwmUddTLup/r/CiU8gbeuLZ0M57xKj/BAZaKjSDQlGPfdDvm55xiEnHPYy+ELJanyPIrMdgztPO+QgK6wvIX+hFjTZZtf2Fr1zWRuXMxIMbkU0L1tYcjDc8WKJ1cgWFC7udeXf7SzAm1pD/sKD3vEZ6OYbKvax6olw/rqPuTmhw+LWafzOFXNzwBU7tIobcpLseRmYriTuxySHKc+Z0DLfqJxpucCRR3g5T4lfwxbGF6Cbr3kBh2VMGZiOw2twyeyfG6VSqws9cc9eLNm52ZtRvRt527NKoX9Lud2+VbQHrglbDRPmvDceW1NslFI7PQXHzoU1WaZMvHqVE6PHjsHG9IEZGUZbNzQaqezQ0FIapI+E2LmNm6WIMZV6klj1AVrJ261wT2ptZrYsIJTiM3KEFuUftREly7lhZ/PB5g+MxZD8aTtAIcdkwz1g+UoQ+JbPkffdHyNKpxra2xUeW5242h00ThVmOJ6OoyjLJunIcPoP8mYVa8Rx5WWeZcH7Du96dRZHh+ZmEHEAUExyzjOyeo0a7m+Ukrmh3etfoKSu2+G16hQEZXHY6ZIlW9kRkABynjsE802MHNoqSvgsHqHGkyJpD0cN8ZXfcEwy9ZAluDdOTSXTUe3ePOJF/zyfgJoTg4SKB/LEi98lkEco+vbcrs1q2gapHJVsMms65iiwh2oVapz88kmWtdnxR3h5DaiKKilpy4KhYQGJUD6P48g/PNA5gHprqXh74yXpCZt19lIuuoaTHLuy9XxhhG868coZ/j38umCxxVCkRxdXmBp8VZJiNag+dxGhN75lqYxD6IAvNc5huVgbUrNuzIxR2xAY+0hl3keWreQHv7QS+heIs/6ZkG5TP9uNI/QyKgc3Q4+iqWWwisnrCBxuleAw3PPxHkdUyokhTLtKbCZQMSkyZEtPOLE2W10nd6Ics4oH7RXbNfb8MWsusaeEl5A9ZM6iFtUNprp5J1h9HvA/P6nraPcAT0SYLjSRyouVB3aBTP7RBjgyOI3+p1hSCZLA/spya+T7Gk1wEyOCirk8aDycbLPYHqEpZ65MsdSbfOTrG+2iyLNYX/p07UTsEQTL4dLK0DLZrnkLLotR2LvpkdMgi3O8sYzWBCotl3bZQjrOz831nSbToguo2GPE5GtzdYHyNLO38aV7ivoE6nV39QLkZXYOli9ItI1qc6DpYNRjSgKiutFk8Qo5SZnDdIVDX0tyxjYZ8Izq/chFEls5meYdLlg5YkVu5a8vWDcQzyOppMLTdqdnEt/uDLvjIEtRYtHO/sRmg0eo/GP623AG7pKK3vZU9l50+89tkSXPwZ7v9zSR4+XvWkV9FyznndFdLyE7wfI+D/a29p3V3YOFabHLWIrjRswrBZMnHeWmdke+SRdjy2SH3Ehvk82FR7H4GWURP675+hGqfEijoIet/BzO1Xy3/EXjo+sZ5CXh5ZA3xKIZkDRCGZA0QhmQNEIZkDQyAfwGrB6Ysogj7MAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NTypeInto.Target>
+                </uix:NTypeInto>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="fe94d097-0ef6-4878-b018-4ee10a94aa3a" Text="kristinekiki65@gmail.com" Version="V3">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://desk.zoho.com/agent/gakii/gakii/tickets/new" DesignTimeRectangle="118, 440, 260, 28" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT ZD_33'" FullSelectorArgument="&lt;webctrl id='ZD_33' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZD_33' tag='INPUT' type='text' class='zd_input_tag zd_v2-textbox-container zd_v2-textbox-basic zd_v2-textbox-varClass zd_v2-textbox-xmedium zd_v2-textbox-primary zd_v2266b1e491d zd_v2-textbox-effect zd_v2-textbox-borderColor_default' aaname='Email' /&gt;" Guid="b21817d3-8d2d-49fa-9da4-24ecb90ac312" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQgAAAAgCAYAAADufuYQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACDSURBVHhe7daxCcAwEARB9d+fQ8Uu4w0GKdsOZuBaWG4NQBAIIAkEkAQCSAIBJIEAkkAASSCAJBBAEgggCQSQBAJIAgEkgQCSQABJIIAkEEASCCAJBJAEAkgCASSBAJJAAEkggCQQQBIIIAkEkAQCSAIBpBuIZ79mZv8ODwJIAgGEmQ95VB4eigyt5QAAAABJRU5ErkJggg==" InformativeScreenshot="3997fd271e653fb356a86b46b731f000.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gakii' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target DesignTimeRectangle="118, 417, 36, 18" ElementType="Text" FriendlyName="'Email'" FullSelectorArgument="&lt;webctrl id='891866000000000393' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='891866000000000393' tag='LABEL' type='' class='zd_v2-label-label zd_v2-label-varClass zd_v2-label-title zd_v2-label-medium zd_v2-labelcolors-default zd_v2-label-font_default zd_v2-label-pointer zd_v2-fields-fieldLabel' aaname='Email' check:innerText='Email' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAWCAYAAACyjt6wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGwSURBVEhL7ZW9a8JAGIfzZ9wquAhd3HQVOugYcGjAKVPpJJ0kuIRMEhxKxuAgpFvd7FDoVDi3ZCjYoaCDQ8YbMzj8+sZL0ZoKamrJkAcOfEm8e3w/TgU5pxDMSiF4EusIUfLxm63gyoOqKFBSS4W3St65JO8uWuX0WSlB41lAiJ9r/1f9DXM4NQWl7hQiDmfWr8lICVqzJL44EfyxDedlIcPsgj6c6wZ004J+xWgzhsqNDR4K+A8aKozagVWgDbjMyAYBPtBRL8t2KTXv4X0cqMexgvsljtbJc3BY9FxhGtwghAh9uB0SZQyljgufRMPAhUai+kQq+sM6lJqBaRhHJGtSzAy8bhxDeG3az+RxcLzg/pBsMyoFq0M/iYk3g96pwg6SmOB9+t5t0lfrEPPlTsaWu1U6U/BwiaWg+rhJh+SXTblJh7Y9Ol4iPjmeRjbsAa2ehmqeBOejFhhrwZpwzKkFBF0lOcqgD4v6UR0nUxqTrxIv4DapZ/tc3qPUj9MeDUlWwf0hiZeUOr3EUeBAja8YmnQWX0HdOzRoj/MEL0l0/n/R/whmoBDMSiGYDeAL1vtjNYg7a1oAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NTypeInto.Target>
+                </uix:NTypeInto>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Subject'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="fe94d097-0ef6-4878-b018-4ee10a94aa3a" Text="Request" Version="V3">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://desk.zoho.com/agent/gakii/gakii/tickets/new" CvTextArgument="Click 'Ticket'" CvType="Text" DesignTimeRectangle="118, 514, 650, 28" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT ZD_35'" FullSelectorArgument="&lt;webctrl id='ZD_35' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZD_35' tag='INPUT' type='text' class='zd_input_tag zd_v2-textbox-container zd_v2-textbox-basic zd_v2-textbox-varClass zd_v2-textbox-xmedium zd_v2-textbox-primary zd_v2266b1e491d zd_v2-textbox-effect zd_v2-textbox-borderColor_default' aaname='Subject' /&gt;" Guid="e9b919d1-76df-416f-bcad-4927c68e0a38" ImageBase64="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" InformativeScreenshot="d9e1f1f922f472b54dee504b7a7d2060.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gakii' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target CvTextArgument="Subject" CvType="Text" DesignTimeRectangle="118, 491, 58, 18" ElementType="Text" FriendlyName="'Subject'" FullSelectorArgument="&lt;webctrl id='Subject' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Subject' tag='LABEL' type='' class='zd_v2-label-label zd_v2-label-varClass zd_v2-label-title zd_v2-label-medium zd_v2-labelcolors-mandatory zd_v2-label-font_default zd_v2-label-cursor zd_v2-fields-fieldLabel zd_v2-fields-labelMandatory' aaname='Subject' check:innerText='Subject' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD4AAAAWCAYAAACYPi8fAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANbSURBVFhH7VZBSxtBFO6fyslDQBCEgp5yqgRaECwUlICeBKGlEOJByUE8iEJJDwleVijkUHooOQg5CHqxIJlN1sVs3LhxbcSEhK9vZifJ7saswRQV4gcLefMmb+d773tv9g3GFK/Exw2vxMcNHuKtUg5abBqFUAiF8DTUuIJaXTofhInyIv0veSztl40ecesXSuEJFNOnuG1REqw8ziNEJJbFjdwSjGGIM+g85tccbuXKSGgwVJIr0E+k3QfnTOqBKe0eusRvf65SpTdhEukO2iwD9V0Cl4ZcCMQwxBu4OtiC/ltHW66MBEOBSuo8P5K2CzfZBErfMtCiIbCNDPS1TVQs6ST4iBPJhly4B9UkEVtUPAq4OVgSCat2iK9nYe7QWph+hybBllO4CmiXuzMF2nyvvYo7efx1Jb9lkPLuaz9JWqyLh5+hh5bFUN3/4vgWtlA5Yqi74vqkTps+7cIsNeDa08VQxEMTUPeOxUva9ikuYhOu//hUYWRRvKe91DRzFCH8ZO848UQS5ine+wxq/IABFefqqiYjYHGqfDhCe7wV9Q43CqyvfQSbosNRdtnyJsonZleWQxGf2cWVK2vtsxRYaBb6H255iVt7syhEiYSwHAjlUQyuSuH3xYORw0XWSVQg8ZZNbaUItdWPMsTD9rSXh7gbTZPhcvsDkaJsnTjZGop4X48f45wO5wwY9x4TRox+T1FVonO9JzJJ8ZZgmNK/kR88DwIrHoweccpQrWRLowOGCxoOhW2HzCjEiz8GEF+nCW/ZfU+zJf198VwYnbiNyiq9pNM7XTjE2d6psKrb1F8LCu3uoZae8xKPprwx6GYIlDq981pYDtqktGv5AqcVfPFKCkprKVT5nv9RcXF1URBGFbC5skkBVppPZ5KdvM6ahwlH+oe2GH5Npojh4x9ufFiJ4Ub3bJkPt+63gE8V/uFG/au5vx1cfs+wjFHy+QFsGsh0ZnVfR6POVcL/NBw8PX53loW2HKHDcwL8KqIJ777DSX6XSd733E/P21VocV/FP6dQjnf2TPq+/nzECX3XWTKHaxcBv98brwHrOy8O963QXJDLQ2DgcHsIzYD7fjD6iT8XHk38Uajnoc1QO9E9/dx4QuJ8uvP+DP6Seyo8bcVfEF6JjxeAf60YED5tYslWAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NTypeInto.Target>
+                </uix:NTypeInto>
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fe94d097-0ef6-4878-b018-4ee10a94aa3a" Version="V3">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://desk.zoho.com/agent/gakii/gakii/tickets/new" CvElementArea="36, 668, 93, 32" CvTextArea="59, 676, 48, 13" CvTextArgument="Submit" CvType="Button" DesignTimeRectangle="38, 669, 90, 29" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl aaname='Submit' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Submit' tag='BUTTON' type='button' class='zd_button_tag zd_v2-button-bold zd_v2266b1e491d zd_v2-button-primaryfilled zd_v2-button-medium zd_v2-button-container zd_v2-button-native zd_v2-button-varClass zd_v24af66c9aeb' check:innerText='Submit' /&gt;" Guid="1a78c889-9dc1-4c30-a717-73d525d3e4a9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAAhCAYAAABQphx6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALSSURBVGhD7Zoxb9pAFMc7s/Zb8A3yETJ26IfIGLEwsiE2OpUOqRgywJRUXaJMSKgSiqqKpSoSEkRUFaC04QAHmxjz73vgMwbfQIV9SOn9pb9k7j1z9s/Hu7O4VzA6igz4I2kL/LefLt5+HON19jdSmQfjGMwsmSmzDSsAzwEDPDkz2zD8ADw/FdUJxvGZGUsF4M1oT97MWCoAr0o0jt9SBrxmSxnwmi1lwGu2lAGv2VJ6wOcnKHU82J7fmbtE6+sUaVWuwtn2kk5aovZJHf93C1SZgbdA9YMqnpyltIBfgwPEvY3zKxs1sQbZuH1U5u86fvCPKHSWsMUzsvl121ndRXfmohTJjddSGsBPUbOogxndpGy7mKPrLdFtTndy1Y4ffNTlIVNYoKyIxWkpDeAt1GbUgeOioIyrwNpo8UUN7a14q72AkG/dMw+NLxO/XPn51NZ1VlE6XuCm4aBl8bkkftDfraC8hUGvjzcSbcu/jvgtpaXU5OhnzRJ9B7mLUSS+H3gSlYJyZYT0ewvXD+Fz/Hx4uLka4aTi0C9q1YDBjylOaI5Z1fRQH7sj/AWOeHJ+imrP24xWGn1iOMe7y3WN3xd8sx6aEypzDKjNvn+K5LMjIO8W3IDWnTr+MsGHXRwj13AhuNPJHGfUth/4cHw3x4CPmkZ7iWpzt80jc9MevtEI2DyVCg6bEX+IaXLlVQ2BbdSp3mZGq6XbasQTqFPKSftQROcJp0WBgg96FzwsWu5RjU8Vp+oafwj4Pn/2cH0p8EYxD8VlKT2lhkBV+7Ruli9QVOMHPQfn/ho6lRmj1NvExR+aD/hgCzytSvqhVQ29hDXr8j+Ew8GnPz9jIL/71+Z74raU/hr/n1vKgNdsKQNes6UMeM2WMuA1W8qA12ypALzZZZC8lbsMzL6a5K3cV2N2kiVrZqvcScbiAD8V8wDiM7NkpmHorC3wRvpkwB9FwF/0s3txHg292QAAAABJRU5ErkJggg==" InformativeScreenshot="e02bffd665fc38c98da784f2d0ff72d1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gakii' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                  </uix:NClick.Target>
+                </uix:NClick>
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="ffb61c6412d3aa998cc6a4d69a2b7ef7.jpg" Selector="&lt;html app='chrome.exe' title='Gakii' /&gt;" Title="Gakii" Url="https://desk.zoho.com/agent/gakii/gakii/tickets/list/all-cases" />
+          </uix:NApplicationCard.TargetApp>
+        </uix:NApplicationCard>
+      </TryCatch.Try>
+    </TryCatch>
+  </Sequence>
+</Activity>
